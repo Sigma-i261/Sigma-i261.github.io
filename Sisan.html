@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OCULASS</title>
+  <link rel="stylesheet" href="css/css_main.css">
+</head>
+<body>
+<header>
+  <div id="logo" onclick="slowScroll('#top')">
+    <span>OCULASS</span>
+  </div>
+  <div id="about">
+    <a href="#" title ="Возможности"onclick="slowScroll('#main')">Возможности</a>
+    <a href="#" onclick="slowScroll('#overview')" title ="Примущества">Примущества</a>
+    <a href="#" onclick="slowScroll('#contacts')" title ="Контакты">Контакты</a>
+    <a href="#" onclick="slowScroll('#faq')" title ="Ответы на вопросы">FAQ</a>
+  </div>
+</header>
+
+<div id="top">
+  <h1> Проект OCULASS</h1>
+  <h3> Мы следим за здоровьем ваших глаз</h3>
+</div>
+
+<div id="main">
+  <div class="intro">
+    <h2>OCULASS - это будущее</h2>
+      <span>Наша программа поможет вам</span>
+  </div>
+  <div class="text">
+      <span>OCULASS поможет облегчить вашу жизнь. Мониторинг глаз, позволит забыть о самостоятельном обследовании их здоровья </span>
+  </div>
+</div>
+
+<div id ="overview">
+  <h2>Преимущества</h2>
+  <h4>с нами проще и надежнее</h4>
+<div class="img">
+  <img src ="https://bankomet.com.ua/wp-content/uploads/2016/08/53c377ae826cb_skaner-setchatki-glaza-min.jpg" alt = "">
+  <span>Быстрое сканирование</span>
+</div>
+<div class="img">
+  <img src ="https://image.freepik.com/free-photo/_7190-346.jpg" alt = "">
+  <span>Минимум действий</span>
+</div>
+<div class="img">
+  <img src ="https://lit-clinic.ru/upload/iblock/8ed/oftalmologiya.jpg" alt = "">
+  <span>Качественные рекомендации</span>
+</div>
+<div class="img">
+  <img src ="https://www.gd.ru/images/articles/10691/splochennyy-kollektiv.jpg" alt = "">
+  <span>Сплоченный и опытный коллектив</span>
+</div>
+</div>
+
+<div id ="contacts">
+  <center><h5>Обратная связь</h5></center>
+  <form id = "form_input">
+    <label for="name">Имя <span>*</span></label><br>
+    <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+    <label for="email">Ваша почта <span>*</span></label><br>
+    <input type="email" placeholder="Введите email" name="email" id="email"><br>
+    <label for="name">Сообщение <span>*</span></label><br>
+    <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+    <div id="mess_send" class = "btn">Отправить</div>
+  </form>
+</div>
+
+<div id="faq">
+ <div>
+   <span class ="title">Ресурсы</span><br>
+   <span class ="heading"> Как будет проходить оплата и будет ли приложение платным? </span>
+   <p>Наше приложение будет бесплатным, но с небольшими микротранзакциями </p>
+   <span class = "heading"> На ваш проект, придется выделить большое количество средств?</span>
+   <p>Потребуется столько, сколько потребуется</p>
+   <span class = "heading"> Затраченные ресурсы будут стоить отдачи от вашего приложения? </span>
+   <p> Да, так как, наш сервис может предоставить огромное количество информации, которое поможет компании, которая примет нас под свое крыло</p>
+ </div>
+ <div>
+   <span class="title">Информация</span><br>
+   <span class="heading">Что входит в услуги сервиса?</span>
+   <p>Услуги вы можете посмотреть на нашем сайте, в презентации о нашем проекте</p>
+   <span class="heading">Как вы будете продвигать ваш проект?</span>
+   <p>Мы будем привлекать крупные компании для спонсировании нашего проекта</p>
+   <span class="heading">При успехе, как долго вы будете поддерживать ваш проект?</span>
+   <p> Пока наши средства не иссякнут </p>
+ </div>
+ <div>
+   <span class="title">Гарантии</span><br>
+   <span class="heading">Какие гарантии есть, что ваш проект рабочий?</span>
+   <p>Мы проводили множество тестов и по их итогам сделали выводы</p>
+   <span class="heading">Что произойдет, если вы захотите выйти из сделки с материнской компанией?</span>
+   <p>Все наши договоренности будут выражены в договоре и мы будем придерживаться их</p>
+   <span class="heading">Какова вероятность того, что данные пользователя будут украдены?</span>
+   <p>Этот вопрос, лучше уточнять у материнской компании</p>
+ </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function slowScroll(id){
+  $('html, body').animate({
+    scrollTop:$(id).offset().top
+  },500);
+}
+
+$(document).on("scroll", function(){
+  if($(window).scrollTop()===0)
+    $("header").removeClass("fixed");
+  else
+    $("header").attr("class","fixed");
+});
+</script>
+
+</body>
+</html>
